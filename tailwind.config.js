@@ -4,8 +4,14 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        '1000': "1000px",
+        '700': "95%",
       },
+      colors: {
+        'custom-gray': '#181818',
+      },
+      borderRadius:{
+        'custom': '1.25em',
+      }
     },
   },
   plugins: [],
