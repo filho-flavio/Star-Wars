@@ -11,14 +11,31 @@
 </head>
 
 <body class="bg-custom-gray w-full h-screen">
-    <div class="w-full h-screen">
-        <div class="w-40 h-700 rounded-custom p-4 bg-opacity-80" style="background-image: url(/img/bg-starwars.jpeg)">
+    <div class="w-full h-screen flex gap-4">
+        <div class="w-52 h-700 rounded-custom my-5 mx-5 p-4 bg-opacity-80 flex flex-col flex-wrap items-center justify-around"
+            style="background-image: url(/img/bg-starwars.jpeg)">
             <header>
-                <img src="/img/name-starwars.png" alt="">
+                <img src="/img/name-starwars.png" alt="" class="cursor-pointer -my-4">
             </header>
+            <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
+                <img src="/img/lupa.png" class="w-7 h-7" alt="">
+                <input type="text" placeholder="Character" class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
+            </div>
+            <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
+                <img src="/img/lupa.png" class="w-7 h-7" alt="">
+                <input type="text" placeholder="Planets" class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
+            </div>
+            <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
+                <img src="/img/lupa.png" class="w-7 h-7" alt="">
+                <input type="text" placeholder="Movies" class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
+            </div>
+            <div class="cursor-pointer w-90 h-12 bg-input rounded-xl flex gap-2 justify-center items-center">
+                <img src="/img/log-out.png" alt="" class="w-7 h-7">
+                <a class="text-custom-gold">Log out</a>
+            </div>
         </div>
-        <div class="w-96">
-            <img src="" alt="">
+        <div class="w-80 h-700 rounded-custom my-5 flex" style="background-image: url(/img/bg-starwars.jpeg);">
+            <img src="/img/sign-sw.gif" alt="" class="rounded-custom">
         </div>
     </div>
 </body>

@@ -534,6 +534,33 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.-my-4 {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-700 {
   height: 95%;
 }
@@ -542,16 +569,92 @@ video {
   height: 100vh;
 }
 
-.w-40 {
-  width: 10rem;
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.w-36 {
+  width: 9rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 .w-full {
   width: 100%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .rounded-custom {
   border-radius: 1.25em;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .bg-custom-gray {
@@ -559,26 +662,35 @@ video {
   background-color: rgb(24 24 24 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-20 {
-  --tw-bg-opacity: 0.2;
+.bg-input {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 35 35 / var(--tw-bg-opacity));
 }
 
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
-}
-
-.bg-opacity-75 {
-  --tw-bg-opacity: 0.75;
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
 
+.from-custom-gold {
+  --tw-gradient-from: #ffe919 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 233 25 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.text-custom-gold {
+  --tw-text-opacity: 1;
+  color: rgb(255 233 25 / var(--tw-text-opacity));
+}
+
+.focus\:text-custom-gold:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 233 25 / var(--tw-text-opacity));
 }
