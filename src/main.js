@@ -1,3 +1,11 @@
+document.querySelector("#inCharacter").addEventListener("keypress", (event) => {
+  if (event.key === "Enter" || event.keyCode == 13) {
+    let inCharater = document.querySelector("#inCharacter").value;
+    console.log(inCharater);
+    starWars(inCharater);
+  }
+});
+
 const url = "https://akabab.github.io/starwars-api/api/all.json";
 
 async function starWars(person) {
@@ -10,7 +18,7 @@ async function starWars(person) {
     const data = await response.json();
     let pessoa = data.find((character) => character.name === person);
     if (pessoa) {
-      console.log(pessoa.name);
+      document.querySelector("#section-animation").classList.add("hidden");
       document.querySelector("#img").setAttribute("src", pessoa.image);
       console.log("Homeworld: " + pessoa.homeworld);
     } else {
@@ -20,10 +28,3 @@ async function starWars(person) {
     console.error("Erro:", error);
   }
 }
-
-starWars("Darth Vader");
-
-const showPerson = () => {
-  let person = "Darth Vader";
-  starWars(person);
-};

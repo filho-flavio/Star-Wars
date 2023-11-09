@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars</title>
+    <meta name="author" content="Flávio Filho">
     <script src="main.js" defer></script>
     <link rel="icon" href="/img/icon.png">
     <link href="/dist/output.css" rel="stylesheet">
@@ -19,7 +20,8 @@
             </header>
             <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
                 <img src="/img/lupa.png" class="w-7 h-7" alt="">
-                <input type="text" placeholder="Character" class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
+                <input type="text" placeholder="Character" id="inCharacter"
+                    class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
             </div>
             <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
                 <img src="/img/lupa.png" class="w-7 h-7" alt="">
@@ -29,13 +31,35 @@
                 <img src="/img/lupa.png" class="w-7 h-7" alt="">
                 <input type="text" placeholder="Movies" class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
             </div>
-            <div class="cursor-pointer w-90 h-12 bg-input rounded-xl flex gap-2 justify-center items-center">
+            <div class="cursor-pointer w-c90 h-12 bg-input rounded-xl flex gap-2 justify-center items-center">
                 <img src="/img/log-out.png" alt="" class="w-7 h-7">
                 <a class="text-custom-gold">Log out</a>
             </div>
         </div>
-        <div class="w-80 h-700 rounded-custom my-5 flex" style="background-image: url(/img/bg-starwars.jpeg);">
+        <div class="hidden w-c80 h-700 rounded-custom my-5 flex" id="section-animation"
+            style="background-image: url(/img/bg-starwars.jpeg);">
             <img src="/img/sign-sw.gif" alt="" class="rounded-custom">
+        </div>
+        <div class="w-c80 h-700 rounded-custom my-5" style="background-image: url(/img/bg-starwars.jpeg);">
+
+            <div class="w-c90 h-12 flex items-center mx-auto my-3">
+                <img src="/img/lupa.png" class="w-7 h-7" alt="">
+                <p class="w-100 h-10 text-white bg-input rounded-md flex items-center mx-2 px-3">Search: Darth Vader</p>
+            </div>
+
+            <div class="w-c90 h-c70 mx-auto flex border-2 border-white">
+                <div class="w-c50 my-auto">
+                    <img src="" class="w-96 h-96 rounded-md mx-auto" id="img" alt="">
+                </div>
+
+                <div class="w-c50 flex flex-col gap-3 border-2 border-white">
+                    <p class="text-white font-bold">Name: Darth Vader</p>
+                    <p class="text-white font-bold">Age:</p>
+                    <p class="text-white font-bold">Homeworld:</p>
+                    <p class="text-white font-bold">Specie:</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
