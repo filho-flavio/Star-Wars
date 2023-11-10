@@ -41,3 +41,10 @@ async function starWars(person) {
     console.error("Erro:", error);
   }
 }
+
+function toggleButton() {
+  const button = document.getElementById("toggleButton");
+  button.classList.toggle("active");
+  if (button.classList.contains("active")) button.textContent = "Dark Mode";
+  else button.textContent = "Light Mode";
+}
