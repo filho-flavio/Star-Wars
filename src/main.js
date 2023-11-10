@@ -1,7 +1,6 @@
 document.querySelector("#inCharacter").addEventListener("keypress", (event) => {
   if (event.key === "Enter" || event.keyCode == 13) {
     let inCharater = document.querySelector("#inCharacter").value;
-    console.log(inCharater);
     starWars(inCharater);
   }
 });
@@ -18,9 +17,23 @@ async function starWars(person) {
     const data = await response.json();
     let pessoa = data.find((character) => character.name === person);
     if (pessoa) {
-      document.querySelector("#section-animation").classList.add("hidden");
+      document.querySelector("#outSearch").textContent =
+        "Search:    " + pessoa.name;
+      document.querySelector("#section-animation").classList.toggle("hidden");
+      document.querySelector("#section-search").classList.toggle("hidden");
       document.querySelector("#img").setAttribute("src", pessoa.image);
-      console.log("Homeworld: " + pessoa.homeworld);
+      document.querySelector("#outName").textContent = "Name: " + pessoa.name;
+      document.querySelector("#outAge").textContent = "Age: " + pessoa.born;
+      document.querySelector("#outGender").textContent =
+        "Gender: " + pessoa.gender;
+      document.querySelector("#outHomeworld").textContent =
+        "Homeworld: " + pessoa.homeworld;
+      document.querySelector("#outSpecies").textContent =
+        "Specie: " + pessoa.species;
+      document.querySelector("#linkInfo").setAttribute("href", pessoa.wiki);
+      document
+        .querySelector("#linkInfo")
+        .setAttribute("title", "Info about " + pessoa.name);
     } else {
       console.log(`Personagem "${person}" não encontrado.`);
     }

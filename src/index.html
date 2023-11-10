@@ -14,13 +14,13 @@
 <body class="bg-custom-gray w-full h-screen">
     <div class="w-full h-screen flex gap-4">
         <div class="w-52 h-700 rounded-custom my-5 mx-5 p-4 bg-opacity-80 flex flex-col flex-wrap items-center justify-around"
-            style="background-image: url(/img/bg-starwars.jpeg)">
+            style="box-shadow: 0px 8px 24px 0px rgba(255,255,255,0.2); background-image: url(/img/bg-starwars.jpeg)">
             <header>
                 <img src="/img/name-starwars.png" alt="" class="cursor-pointer -my-4">
             </header>
             <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
                 <img src="/img/lupa.png" class="w-7 h-7" alt="">
-                <input type="text" placeholder="Character" id="inCharacter"
+                <input type="text" placeholder="Character" value="Darth Vader" id="inCharacter"
                     class="w-32 h-8 bg-transparent text-custom-gold rounded-lg">
             </div>
             <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
@@ -36,28 +36,49 @@
                 <a class="text-custom-gold">Log out</a>
             </div>
         </div>
-        <div class="hidden w-c80 h-700 rounded-custom my-5 flex" id="section-animation"
-            style="background-image: url(/img/bg-starwars.jpeg);">
+
+        <div class="w-c80 h-700 rounded-custom my-5 flex" id="section-animation"
+            style="background-image: url(/img/bg-starwars.jpeg);box-shadow: 0px 8px 24px 0px rgba(255,255,255,0.2); background-image: url(/img/bg-starwars.jpeg);">
             <img src="/img/sign-sw.gif" alt="" class="rounded-custom">
         </div>
-        <div class="w-c80 h-700 rounded-custom my-5" style="background-image: url(/img/bg-starwars.jpeg);">
+
+        <div class="hidden w-c80 h-700 rounded-custom my-5"
+            style="box-shadow: 0px 8px 24px 0px rgba(255,255,255,0.2); background-image: url(/img/bg-starwars.jpeg);" id="section-search">
 
             <div class="w-c90 h-12 flex items-center mx-auto my-3">
                 <img src="/img/lupa.png" class="w-7 h-7" alt="">
-                <p class="w-100 h-10 text-white bg-input rounded-md flex items-center mx-2 px-3">Search: Darth Vader</p>
+                <p id="outSearch" class="w-c100 h-10 text-white bg-input rounded-md flex items-center mx-2 px-3">Search:
+                    Darth Vader</p>
             </div>
 
-            <div class="w-c90 h-c70 mx-auto flex border-2 border-white">
-                <div class="w-c50 my-auto">
-                    <img src="" class="w-96 h-96 rounded-md mx-auto" id="img" alt="">
+            <div class="w-c90 h-c85 mx-auto flex rounded-lg gap-4">
+
+                <div
+                    class="w-c50 h-c85 my-auto flex items-center bg-input bg-opacity-80 rounded-full border-custom-gold border-2"  style="box-shadow: 0px 1px 1px 0px rgba(255,233,25,1),
+                    0px 2px 2px 0px rgba(0,0,0,0.11),
+                    0px 4px 4px 0px rgba(0,0,0,0.11),
+                    0px 8px 8px 0px rgba(255,255,255,1),
+                    0px 16px 16px 0px rgba(0,0,0,0.11),
+                    0px 32px 32px 0px rgba(0,0,0,0.11);">
+                    <img src="/img/darth-vader.jpg" class="w-c70 h-c70 rounded-custom-2 mx-auto" id="img" alt="">
                 </div>
 
-                <div class="w-c50 flex flex-col gap-3 border-2 border-white">
-                    <p class="text-white font-bold">Name: Darth Vader</p>
-                    <p class="text-white font-bold">Age:</p>
-                    <p class="text-white font-bold">Homeworld:</p>
-                    <p class="text-white font-bold">Specie:</p>
+                <div class="w-c50 h-c100 flex flex-col gap-7 justify-center items-center">
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
+                        id="outName" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Name:</p>
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
+                        id="outAge" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Age:</p>
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
+                        id="outGender" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Gender:</p>
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
+                        id="outHomeworld" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Homeworld:</p>
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
+                        id="outSpecies" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Specie:</p>
+                    <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl flex gap-10 items-center"
+                        id="outWiki" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">More Info: <a
+                            class="text-blue-500" href="" title="" target="_blank" id="linkInfo">Here</a></p>
                 </div>
+
             </div>
 
         </div>
