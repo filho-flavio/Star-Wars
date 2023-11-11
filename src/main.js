@@ -18,24 +18,23 @@ async function starWars(person) {
     let pessoa = data.find((character) => character.name === person);
     if (pessoa) {
       document.querySelector("#outSearch").textContent =
-        "Search:    " + pessoa.name;
-      document.querySelector("#section-animation").classList.toggle("hidden");
-      document.querySelector("#section-search").classList.toggle("hidden");
+        "Searched:    " + pessoa.name;
+      document.querySelector("#section-animation").classList.add("hidden");
+      document.querySelector("#section-search").classList.remove("hidden");
       document.querySelector("#img").setAttribute("src", pessoa.image);
-      document.querySelector("#outName").textContent = "Name: " + pessoa.name;
-      document.querySelector("#outAge").textContent = "Age: " + pessoa.born;
-      document.querySelector("#outGender").textContent =
-        "Gender: " + pessoa.gender;
-      document.querySelector("#outHomeworld").textContent =
-        "Homeworld: " + pessoa.homeworld;
-      document.querySelector("#outSpecies").textContent =
-        "Specie: " + pessoa.species;
+      document.querySelector("#name").textContent = pessoa.name;
+      document.querySelector("#age").textContent = pessoa.born;
+      document.querySelector("#gender").textContent = pessoa.gender;
+      document.querySelector("#homeworld").textContent = pessoa.homeworld;
+      document.querySelector("#species").textContent = pessoa.species;
       document.querySelector("#linkInfo").setAttribute("href", pessoa.wiki);
       document
         .querySelector("#linkInfo")
         .setAttribute("title", "Info about " + pessoa.name);
     } else {
-      console.log(`Personagem "${person}" não encontrado.`);
+      document.querySelector("#section-animation").classList.remove("hidden");
+      document.querySelector("#section-search").classList.add("hidden");
+      alert(`Character "${person}" not found, write correctly`);
     }
   } catch (error) {
     console.error("Erro:", error);
@@ -45,6 +44,16 @@ async function starWars(person) {
 function toggleButton() {
   const button = document.getElementById("toggleButton");
   button.classList.toggle("active");
-  if (button.classList.contains("active")) button.textContent = "Dark Mode";
-  else button.textContent = "Light Mode";
+
+  // document.body.classList.toggle("light-mode");
+  // let sidebar = document.querySelector("#sidebar");
+  // sidebar.style.backgroundImage = "url('../img/bg-light.png')";
+  // document
+  //   .querySelector("#img-header")
+  //   .setAttribute("src", "../img/name-white.png");
+
+  const buttonText = button.classList.contains("active")
+    ? "Dark Mode"
+    : "Light Mode";
+  button.textContent = buttonText;
 }

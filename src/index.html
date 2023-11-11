@@ -13,10 +13,10 @@
 
 <body class="bg-custom-gray w-full h-screen">
     <div class="w-full h-screen flex gap-4">
-        <div class="w-52 h-700 rounded-custom my-5 mx-5 p-4 bg-opacity-80 flex flex-col flex-wrap items-center justify-around"
+        <div id="sidebar" class="w-52 h-700 rounded-custom my-5 mx-5 p-4 bg-opacity-80 flex flex-col flex-wrap items-center justify-around"
             style="box-shadow: 0px 8px 24px 0px rgba(255,255,255,0.2); background-image: url(../img/bg-starwars.jpeg)">
             <header>
-                <img src="../img/name-starwars.png" alt="" class="cursor-pointer -my-4">
+                <img id="img-header" src="../img/name-starwars.png" alt="" class="cursor-pointer -my-4">
             </header>
             <div class="w-100 h-12 bg-input rounded-xl flex gap-1 items-center justify-center">
                 <img src="../img/lupa.png" class="w-7 h-7" alt="">
@@ -35,7 +35,9 @@
                 <img src="../img/log-out.png" alt="" class="w-7 h-7">
                 <a class="text-custom-gold">Log out</a>
             </div> -->
-            <button id="toggleButton" onclick="toggleButton()">Light Mode</button>
+            <button id="toggleButton" onclick="toggleButton()">
+                Light Mode
+            </button>
         </div>
 
         <div class="w-c80 h-700 rounded-custom my-5 flex" id="section-animation"
@@ -67,18 +69,18 @@
 
                 <div class="w-c50 h-c100 flex flex-col gap-7 justify-center items-center">
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
-                        id="outName" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Name:</p>
+                        id="outName" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Name:<b class="text-custom-gold" id="name"></b> </p>
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
-                        id="outAge" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Age:</p>
+                        id="outAge" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Age:<b class="text-custom-gold" id="age"></b> </p>
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
-                        id="outGender" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Gender:</p>
+                        id="outGender" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Gender:<b class="text-custom-gold" id="gender"></b> </p>
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
-                        id="outHomeworld" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Homeworld:</p>
+                        id="outHomeworld" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">Homeworld:<b class="text-custom-gold" id="homeworld"></b> </p>
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl  flex gap-10 items-center"
-                        id="outSpecies" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Specie:</p>
+                        id="outSpecies" style="box-shadow: 0px 7px 30px -10px rgba(255,233,25,1);">Specie: <b class="text-custom-gold" id="species"></b> </p>
                     <p class="text-white font-bold px-3 w-c100 h-14 bg-input bg-opacity-80 border-2 border-custom-gold rounded-xl flex gap-10 items-center"
                         id="outWiki" style="box-shadow: 0px 7px 30px -10px rgba(174,172,172,1);">More Info: <a
-                            class="text-blue-500" href="" title="" target="_blank" id="linkInfo">Here</a></p>
+                            class="text-blue-500" href="" title="" target="_blank" id="linkInfo">Wookieepedia</a></p>
                 </div>
 
             </div>
