@@ -41,22 +41,22 @@ async function starWars(person) {
   }
 }
 
-function toggleButton() {
-  const button = document.getElementById("toggleButton");
-  button.classList.toggle("active");
+// function toggleButton() {
+//   const button = document.getElementById("toggleButton");
+//   button.classList.toggle("active");
 
-  // document.body.classList.toggle("light-mode");
-  // let sidebar = document.querySelector("#sidebar");
-  // sidebar.style.backgroundImage = "url('../img/bg-light.png')";
-  // document
-  //   .querySelector("#img-header")
-  //   .setAttribute("src", "../img/name-white.png");
+//   // document.body.classList.toggle("light-mode");
+//   // let sidebar = document.querySelector("#sidebar");
+//   // sidebar.style.backgroundImage = "url('../img/bg-light.png')";
+//   // document
+//   //   .querySelector("#img-header")
+//   //   .setAttribute("src", "../img/name-white.png");
 
-  const buttonText = button.classList.contains("active")
-    ? "Dark Mode"
-    : "Light Mode";
-  button.textContent = buttonText;
-}
+//   const buttonText = button.classList.contains("active")
+//     ? "Dark Mode"
+//     : "Light Mode";
+//   button.textContent = buttonText;
+// }
 
 document.querySelector("#img-header").addEventListener("click", () => {
   document.querySelector("#section-animation").classList.remove("hidden");

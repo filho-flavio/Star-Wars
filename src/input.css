@@ -39,4 +39,12 @@ input {
     #sidebar {
         max-width: 50px;
     }
+
+    input {
+        display: none
+    }
+
+    #toggleButton {
+        display: none;
+    }
 }

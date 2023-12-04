@@ -660,6 +660,10 @@ video {
   min-width: 30%;
 }
 
+.min-w-c50 {
+  min-width: 50%;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -838,5 +842,13 @@ input {
 @media only screen and (max-width: 400px) {
   #sidebar {
     max-width: 50px;
+  }
+
+  input {
+    display: none
+  }
+
+  #toggleButton {
+    display: none;
   }
 }
