@@ -57,3 +57,8 @@ function toggleButton() {
     : "Light Mode";
   button.textContent = buttonText;
 }
+
+document.querySelector("#img-header").addEventListener("click", () => {
+  document.querySelector("#section-animation").classList.remove("hidden");
+  document.querySelector("#section-search").classList.add("hidden");
+});

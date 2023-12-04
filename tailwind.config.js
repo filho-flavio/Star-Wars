@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js,css}"],
   theme: {
     extend: {
+      minWidth: {
+        'c10': '10%',
+        'c20': '20%',
+        'c30': '30%',
+      },
       height: {
         '700': "95%",
         'c70': '70%',
@@ -12,6 +17,8 @@ module.exports = {
         'c100': '100%',
       },
       width: {
+        'c30': '30%',
+        'c40': '40%',
         'c50': '50%',
         'c70': '70%',
         'c80': '80%',
